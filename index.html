@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Cases</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+      body {
+        font-family: Roboto;
+        margin: 20px;
+        background-color: #ffffff;
+        font-weight: normal;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .header h2 {
+        font-weight: normal;
+        margin: 0;
+      }
+
+      .back-arrow {
+        font-size: 1.2em;
+        margin-right: 10px;
+        color: #555;
+        text-decoration: none;
+      }
+
+      .tabs {
+        margin-top: 10px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+      }
+
+      .tab {
+        padding: 10px 15px;
+        cursor: pointer;
+        color: #555;
+        text-decoration: none;
+      }
+
+      .tab.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+      }
+
+      .search-bar {
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        padding: 8px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-icon {
+        color: #777;
+        margin-right: 8px;
+      }
+
+      .search-input {
+        border: none;
+        background: transparent;
+        flex-grow: 1;
+        font-size: 1em;
+        color: #333;
+      }
+
+      .search-input:focus {
+        outline: none;
+      }
+
+      .case-card {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .case-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .case-icon {
+        background-color: #AC3526;
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        font-size: 0.8em;
+      }
+
+      .case-title {
+        color: #333;
+        margin-right: auto;
+      }
+
+      .case-status {
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-size: 0.8em;
+        color: #fff;
+      }
+
+      .status-in-progress {
+        color: #000080;
+        background-color: #C6E6FB;
+      }
+
+      .status-urgent {
+        color: red;
+        background-color: #F5DFDC;
+        margin-left: 5px;
+      }
+
+      .case-details {
+        color: #555;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .case-progress {
+        display: flex;
+        align-items: center;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      .progress-icon {
+        color: #AC3526;
+        margin-right: 10px;
+      }
+
+      .progress-text {
+        color: #333;
+        font-size: 0.9em;
+      }
+
+      .case-actions {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .button {
+        background-color: #0C58CA;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-left: 10px;
+        text-decoration: none;
+      }
+
+      .button-secondary {
+        background-color: white;
+        color: #F0F0F0;
+        border: solid;
+        border-width: 1px;
+        border-color: #cacaca;
+      }
+
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #777;
+        font-size: 0.8em;
+      }
+
+      .footer a {
+        color: #777;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="#" class="back-arrow">
+          <i class="material-icons">arrow_back</i>
+        </a>
+        <h2>Support Cases</h2>
+      </div>
+      <div class="tabs">
+        <a href="#" class="tab active">All cases</a>
+        <a href="#" class="tab">Open</a>
+        <a href="#" class="tab">Resolved</a>
+        <a href="#" class="tab">Closed</a>
+      </div>
+      <div class="search-bar">
+        <span class="search-icon">
+          <i class="material-icons">search</i>
+        </span>
+        <input type="text" class="search-input" placeholder="Search support cases">
+      </div>
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-icon">
+            <i class="material-icons">report</i>
+          </div>
+          <h3 class="case-title">Legal Investigations Support</h3>
+          <span class="case-status status-in-progress">IN PROGRESS</span>
+          <span class="case-status status-urgent">URGENT</span>
+        </div>
+        <div class="case-details"> Internal Ref #GS-2225-634905 • Opened Jan. 1, 202X </div>
+        <p>Your legal request is currently under review. This matter requires additional documentation for processing.</p>
+        <p>Our team has received your submitted documents and supporting materials. Review is in progress to determine next steps.</p>
+        <div class="case-progress">
+          <span class="progress-icon">
+            <i class="material-icons">label_important</i>
+          </span>
+          <span class="progress-text">Legal Documentation Review - In Progress <br>Estimated review completion: May 27th, 2025 </span>
+        </div>
+      </div>
+      <div class="case-actions">
+        <a href="#" class="button button-secondary">Upload additional documents</a>
+        <a href="#" class="button">View case</a>
+      </div>
+      <div class="footer">
+        <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a> | <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a> | <a href="https://support.google.com/">Help</a> | <a href="https://about.google/">About</a>
+        <p>&copy; 2025 Google LLC</p>
+      </div>
+    </div>
+  </body>
+</html>
+
